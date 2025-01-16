@@ -29,7 +29,7 @@ export const createDocument = async ({
     });
 
     revalidatePath("/");
-
+    
     return parseStringify(room);
   } catch (error) {
     console.log(`Error happened while creating a room: ${error}`);

@@ -17,6 +17,7 @@ const Home = async () => {
     <main className="home-container">
       <Header className="sticky ">
         <div className="flex items-center gap-2 lg:gap-4">
+          Notification
           <SignedIn>
             <UserButton />
           </SignedIn>
