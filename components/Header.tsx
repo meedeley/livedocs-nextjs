@@ -19,9 +19,11 @@ const Header = ({children } : HeaderProps ) => {
           alt="Logo"
           width={32}
           height={32}
-          className="mr-2 md:block"
+          className="mr-2 md:hidden"
         ></Image>
       </Link>
+
+      {children}
     </div>
   );
 };
