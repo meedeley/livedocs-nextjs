@@ -8,7 +8,12 @@ import Loader from "@/components/Loader";
 const Provider = ({ children }: { children: ReactNode }) => {
   
   return (
-    <LiveblocksProvider authEndpoint={"/api/liveblocks-auth"}>
+    <LiveblocksProvider 
+    authEndpoint={"/api/liveblocks-auth"}
+    resolveUsers={async ({userIds}) => {
+      // const users = await getClerkUser();
+    }}
+    >
       <ClientSideSuspense fallback={<Loader/>}>
         {children}
       </ClientSideSuspense>
